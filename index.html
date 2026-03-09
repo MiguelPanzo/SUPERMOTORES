@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>SUPER MOTORES</title>
+
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h1>SUPER MOTORES</h1>
+    <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#carros">Carros</a></li>
+        <li><a href="#cadastro">Cadastro</a></li>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#localizacao">Localização</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h2>SUPER MOTORES</h2>
+    <p>Carros de luxo e básicos, para todos os gostos</p>
+    <button onclick="document.getElementById('carros').scrollIntoView({behavior:'smooth'})">Ver Carros</button>
+</section>
+
+<!-- CARROS -->
+<section id="carros" class="carros">
+    <h2>Carros à Venda</h2>
+    <div class="carros-grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1606813909125-f1a132d2c701" alt="Carro Luxo">
+            <h3>Ferrari F8</h3>
+            <p>Luxo extremo, performance incrível.</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1615874959471-3b1b9f6c6d44" alt="Carro Básico">
+            <h3>Honda Civic</h3>
+            <p>Confiável e confortável para o dia a dia.</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1618271081098-174788f95b36" alt="Carro Luxo">
+            <h3>Lamborghini Huracán</h3>
+            <p>Design arrojado, potência máxima.</p>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1617196035031-1c65a7ab7fd9" alt="Carro Básico">
+            <h3>Volkswagen Golf</h3>
+            <p>Perfeito para a cidade e economia de combustível.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FORMULÁRIOS -->
+<section class="forms">
+    <!-- Cadastro -->
+    <div id="cadastro" class="form-card">
+        <h3>Cadastro de Cliente</h3>
+        <input type="text" placeholder="Nome completo" id="nome">
+        <input type="email" placeholder="Email" id="email">
+        <input type="password" placeholder="Senha" id="senha">
+        <button onclick="cadastrar()">Cadastrar</button>
+    </div>
+    <!-- Login -->
+    <div id="login" class="form-card">
+        <h3>Login</h3>
+        <input type="email" placeholder="Email" id="loginEmail">
+        <input type="password" placeholder="Senha" id="loginSenha">
+        <button onclick="login()">Entrar</button>
+    </div>
+</section>
+
+<!-- LOCALIZAÇÃO -->
+<section id="localizacao" class="localizacao">
+    <h2>Localização</h2>
+    <p>SUPER MOTORES - Luanda, Belas</p>
+    <p>Empresa do Engenheiro Miguel Pnanzo</p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 SUPER MOTORES</p>
+</footer>
+
+<!-- JS INTERATIVO -->
+<script>
+function cadastrar() {
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+    if(nome && email && senha){
+        alert('Cadastro realizado com sucesso, ' + nome + '!');
+    } else {
+        alert('Por favor, preencha todos os campos.');
+    }
+}
+
+function login() {
+    const email = document.getElementById('loginEmail').value;
+    const senha = document.getElementById('loginSenha').value;
+    if(email && senha){
+        alert('Login efetuado com sucesso!');
+    } else {
+        alert('Por favor, preencha todos os campos.');
+    }
+}
+</script>
+
+</body>
+</html>

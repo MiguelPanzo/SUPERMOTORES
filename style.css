@@ -1,0 +1,227 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* CORES CHIQUES */
+:root {
+    --primary: #1a1a1a;  /* preto elegante */
+    --secondary: #d4af37; /* dourado luxuoso */
+    --accent: #f2f2f2;    /* cinza claro */
+    --hover: #ff9900;     /* destaque */
+}
+
+/* BODY */
+body {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+    background: var(--primary);
+    color: var(--secondary);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav h1 {
+    font-size: 28px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--secondary);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--hover);
+}
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: url("https://images.unsplash.com/photo-1608093546484-6ec273c7ee5e") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--accent);
+}
+
+.hero h2 {
+    font-size: 60px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 4px #000;
+}
+
+.hero button {
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    background: var(--secondary);
+    color: var(--primary);
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    background: var(--hover);
+    color: var(--accent);
+}
+
+/* SEÇÃO DE CARROS */
+.carros {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.carros h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.carros-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: 0.4s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 15px;
+    color: var(--primary);
+}
+
+.card p {
+    padding: 0 15px 20px;
+    color: #555;
+}
+
+/* FORMULÁRIOS */
+.forms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+    padding: 80px 8%;
+}
+
+.form-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    width: 300px;
+}
+
+.form-card h3 {
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.form-card input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.form-card button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--secondary);
+    color: var(--primary);
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-card button:hover {
+    background: var(--hover);
+    color: var(--accent);
+}
+
+/* LOCALIZAÇÃO */
+.localizacao {
+    background: var(--primary);
+    color: var(--secondary);
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.localizacao h2 {
+    margin-bottom: 20px;
+}
+
+.localizacao p {
+    font-size: 18px;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: var(--secondary);
+    text-align: center;
+    padding: 30px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px) {
+    .hero h2 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .forms {
+        flex-direction: column;
+        align-items: center;
+    }
+}
